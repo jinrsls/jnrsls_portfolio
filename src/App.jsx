@@ -5,7 +5,6 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
-import About from "./pages/About";
 
 function App() {
   return (
@@ -21,9 +20,6 @@ function App() {
 
         <section id="home" className="pt-10 min-h-screen">
           <Home />
-        </section>
-        <section id="about" className="pt-10 min-h-screen">
-          <About />
         </section>
         <section id="projects" className="pt-10 min-h-screen">
           <Projects />
