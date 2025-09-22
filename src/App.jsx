@@ -1,43 +1,44 @@
+import Sidebar from "./components/Sidebar";
 import DarkVeil from "./DarkVeil";
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 
-function App() {
+export default function App() {
   return (
-    <div className="relative w-full min-h-screen overflow-x-hidden text-white">
-      {/* Background */}
-      <div className="fixed inset-0 -z-10">
-        <DarkVeil />
+    <div className="px-[20px] md:px-[50px] lg:px-[250px] font-mono">
+      {/* <div className="mb-6 p-4 text-white rounded-lg shadow-2xl">
+        <h1>Hello</h1>
+      </div> */}
+
+      {/* Existing main flex container */}
+      <div className="flex rounded-lg shadow-2xl">
+        <div className="fixed inset-0 -z-10">
+          <DarkVeil />
+        </div>
+
+        {/* Sidebar */}
+        <Sidebar />
+
+        {/* Main Content */}
+        <main className="flex-1 min-h-auto text-gray-200">
+          <div className="w-full max-w-3xl mx-auto p-8">
+            <section id="home">
+              <Home />
+            </section>
+            <section id="projects">
+              <Projects />
+            </section>
+            <section id="experience">
+              <Experience />
+            </section>
+            <section id="contact">
+              <Contact />
+            </section>
+          </div>
+        </main>
       </div>
-
-      <main className="mx-4 sm:mx-12 lg:mx-[250px]">
-        {/* Navbar */}
-        <Navbar />
-
-        <section id="home" className="pt-10 min-h-screen">
-          <Home />
-        </section>
-        <section id="projects" className="pt-10 min-h-screen">
-          <Projects />
-        </section>
-        <section id="experience" className="pt-10 min-h-screen">
-          <Experience />
-        </section>
-        <section id="contact" className="pt-10 min-h-screen">
-          <Contact />
-        </section>
-
-        {/* Footer */}
-        <Footer />
-      </main>
-
-
     </div>
   );
 }
-
-export default App;

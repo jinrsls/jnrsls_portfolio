@@ -2,7 +2,7 @@ import LogoLoop from "../components/LogoLoop";
 import BlurText from "../components/BlurText";
 
 const handleAnimationComplete = () => {
-  console.log('Animation completed!');
+  console.log("Animation completed!");
 };
 
 import {
@@ -18,7 +18,7 @@ import {
   SiVuedotjs,
 } from "react-icons/si";
 
-export default function Home() {
+export default function About() {
   const skillLogos = [
     { node: <SiHtml5 color="#E34F26" size={48} />, title: "HTML5" },
     { node: <SiCss3 color="#1572B6" size={48} />, title: "CSS3" },
@@ -36,42 +36,63 @@ export default function Home() {
   ];
 
   return (
-    <section className="h-screen flex flex-col justify-center px-6 bg-transparent">
-      <div className="max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        {/* Left Section */}
-        <header className="space-y-6">
-          <h5 className="text-xl font-medium text-gray-300">
-            Hi, I’m{" "}
-            <span className="font-bold text-indigo-100 tracking-wide">
-              Jane Rosales
+    <section
+      id="about"
+      className="h-auto flex flex-col justify-center px-6 py-20"
+    >
+      <div className="max-w-4xl mx-auto text-center md:text-left">
+        {/* Title */}
+        <h1 className="text-3xl md:text-4xl font-extrabold text-gray-100 mb-6 tracking-wide">
+          ABOUT ME
+        </h1>
+
+        {/* About Text */}
+        <article className="space-y-4">
+          <p className="text-base md:text-lg text-gray-300 leading-relaxed text-justify">
+            I'm{" "}
+            <span className="font-semibold text-indigo-300">Jane Rosales</span>,
+            a Front-End Developer with over{" "}
+            <span className="font-semibold text-indigo-300">
+              2 years of hands-on experience
+            </span>{" "}
+            in Laravel-based systems, specializing in creating responsive,
+            accessible, and user-friendly web interfaces. Proficient in{" "}
+            <span className="font-semibold">
+              HTML, CSS, JavaScript, and PHP
             </span>
-          </h5>
+            , with strong expertise in
+            <span className="font-semibold"> Tailwind CSS</span> and{" "}
+            <span className="font-semibold">Bootstrap</span> for modern UI
+            development.
+          </p>
 
-          <h1 className="text-5xl md:text-7xl font-extrabold leading-tight text-gray-100">
-            <BlurText
-              text="Front-End Developer"
-              delay={150}
-              animateBy="words"
-              direction="top"
-              onAnimationComplete={handleAnimationComplete}
-            />
-          </h1>
-
-          <h2 className="text-lg md:text-xl font-medium text-indigo-200 tracking-wide">
-            Crafting Clean & Modern Interfaces
-          </h2>
-        </header>
-
-        {/* Right Section */}
-        <article>
-          <p className="text-lg md:text-2xl text-gray-300 leading-relaxed text-justify">
-            Specialized in modern front-end frameworks and UI design to build responsive, visually engaging interfaces. Focused on enhancing accessibility, performance, and overall user satisfaction.
+          <p className="text-base md:text-lg text-gray-300 leading-relaxed text-justify">
+            Experienced in building dynamic applications using{" "}
+            <span className="font-semibold">React</span> and{" "}
+            <span className="font-semibold">Vue.js</span>, with the ability to
+            contribute to{" "}
+            <span className="font-semibold">back-end integrations</span> and
+            optimize workflows in{" "}
+            <span className="font-semibold">Agile team environments</span>.
+            Recognized for improving{" "}
+            <span className="text-indigo-300">
+              performance, scalability, and overall user experience
+            </span>
+            .
           </p>
         </article>
       </div>
 
-      {/* Skills Logo Loop */}
-      <div className="mt-16">
+      {/* Tech Stack Section */}
+      <div className="mt-20 text-start">
+        <h2 className="text-2xl md:text-3xl font-bold text-gray-100 mb-2">
+          TECH STACK
+        </h2>
+        <p className="text-sm text-gray-400 mb-8">
+          These are the technologies I have worked with throughout my journey.
+        </p>
+
+        {/* Skills Logo Loop */}
         <LogoLoop
           logos={skillLogos}
           speed={50}
