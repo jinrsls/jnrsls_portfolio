@@ -34,7 +34,7 @@ export default function About() {
       id="about"
       className="h-auto flex flex-col justify-center px-6 py-20 min-h-screen"
     >
-      <div className="max-w-4xl mx-auto text-center md:text-left">
+      <div className="max-w-4xl mx-auto text-left">
         {/* Title */}
         <h1 className="text-2xl font-extrabold text-gray-100 mb-6 tracking-wide">
           ABOUT ME

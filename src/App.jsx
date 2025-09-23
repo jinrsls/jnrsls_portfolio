@@ -9,11 +9,6 @@ import WorkExperience from "./pages/WorkExperience";
 export default function App() {
   return (
     <div className="px-[20px] md:px-[50px] lg:px-[220px] font-mono">
-      {/* <div className="mb-6 p-4 text-white rounded-lg shadow-2xl">
-        <h1>Hello</h1>
-      </div> */}
-
-      {/* Existing main flex container */}
       <div className="flex rounded-lg shadow">
         <div className="fixed inset-0 -z-10">
           <DarkVeil />
@@ -23,8 +18,8 @@ export default function App() {
         <Sidebar />
 
         {/* Main Content */}
-        <main className="flex-1 min-h-auto text-gray-200">
-          <div className="w-full max-w-3xl mx-auto p-8">
+        <main className="flex-1 min-h-auto text-gray-200 w-full md:ml-4">
+          <div className="w-full max-w-3xl mx-auto p-6 md:p-8">
             <section id="home">
               <Home />
             </section>
