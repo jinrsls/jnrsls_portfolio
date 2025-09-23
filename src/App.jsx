@@ -4,16 +4,17 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
+import WorkExperience from "./pages/WorkExperience";
 
 export default function App() {
   return (
-    <div className="px-[20px] md:px-[50px] lg:px-[250px] font-mono">
+    <div className="px-[20px] md:px-[50px] lg:px-[220px] font-mono">
       {/* <div className="mb-6 p-4 text-white rounded-lg shadow-2xl">
         <h1>Hello</h1>
       </div> */}
 
       {/* Existing main flex container */}
-      <div className="flex rounded-lg shadow-2xl">
+      <div className="flex rounded-lg shadow">
         <div className="fixed inset-0 -z-10">
           <DarkVeil />
         </div>
@@ -27,11 +28,8 @@ export default function App() {
             <section id="home">
               <Home />
             </section>
-            <section id="projects">
-              <Projects />
-            </section>
             <section id="experience">
-              <Experience />
+              <WorkExperience />
             </section>
             <section id="contact">
               <Contact />

@@ -1,10 +1,4 @@
 import LogoLoop from "../components/LogoLoop";
-import BlurText from "../components/BlurText";
-
-const handleAnimationComplete = () => {
-  console.log("Animation completed!");
-};
-
 import {
   SiHtml5,
   SiCss3,
@@ -38,11 +32,11 @@ export default function About() {
   return (
     <section
       id="about"
-      className="h-auto flex flex-col justify-center px-6 py-20"
+      className="h-auto flex flex-col justify-center px-6 py-20 min-h-screen"
     >
       <div className="max-w-4xl mx-auto text-center md:text-left">
         {/* Title */}
-        <h1 className="text-3xl md:text-4xl font-extrabold text-gray-100 mb-6 tracking-wide">
+        <h1 className="text-2xl font-extrabold text-gray-100 mb-6 tracking-wide">
           ABOUT ME
         </h1>
 
@@ -60,8 +54,8 @@ export default function About() {
             <span className="font-semibold">
               HTML, CSS, JavaScript, and PHP
             </span>
-            , with strong expertise in
-            <span className="font-semibold"> Tailwind CSS</span> and{" "}
+            , with strong expertise in{" "}
+            <span className="font-semibold">Tailwind CSS</span> and{" "}
             <span className="font-semibold">Bootstrap</span> for modern UI
             development.
           </p>
@@ -85,9 +79,7 @@ export default function About() {
 
       {/* Tech Stack Section */}
       <div className="mt-20 text-start">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-100 mb-2">
-          TECH STACK
-        </h2>
+        <h2 className="text-2xl font-bold text-gray-100 mb-2">TECH STACK</h2>
         <p className="text-sm text-gray-400 mb-8">
           These are the technologies I have worked with throughout my journey.
         </p>
@@ -105,6 +97,59 @@ export default function About() {
           fadeOutColor="#0b0b0b"
           ariaLabel="Technical skills logos"
         />
+      </div>
+
+      {/* What I'm Doing Section */}
+      <div className="mt-20 text-start">
+        <h2 className="text-2xl font-bold text-gray-100 mb-6">
+          WHAT I'M DOING
+        </h2>
+
+        <div className="grid md:grid-cols-2 gap-6">
+          {/* Card 1 */}
+          <div className="p-6 bg-gray-800/40 rounded-2xl shadow-md transition transform hover:scale-105 hover:shadow-lg hover:bg-gray-700/60">
+            <h3 className="text-xl font-semibold text-indigo-300 mb-2">
+              Front-End Development
+            </h3>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Building responsive, accessible, and user-friendly interfaces
+              using React, Vue.js, Tailwind CSS, and Bootstrap.
+            </p>
+          </div>
+
+          {/* Card 2 */}
+          <div className="p-6 bg-gray-800/40 rounded-2xl shadow-md transition transform hover:scale-105 hover:shadow-lg hover:bg-gray-700/60">
+            <h3 className="text-xl font-semibold text-indigo-300 mb-2">
+              Laravel Integration
+            </h3>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Developing and maintaining Laravel-based systems with smooth
+              integration of front-end and back-end functionalities.
+            </p>
+          </div>
+
+          {/* Card 3 */}
+          <div className="p-6 bg-gray-800/40 rounded-2xl shadow-md transition transform hover:scale-105 hover:shadow-lg hover:bg-gray-700/60">
+            <h3 className="text-xl font-semibold text-indigo-300 mb-2">
+              Performance Optimization
+            </h3>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Enhancing web performance, accessibility, and scalability for
+              seamless user experiences across devices.
+            </p>
+          </div>
+
+          {/* Card 4 */}
+          <div className="p-6 bg-gray-800/40 rounded-2xl shadow-md transition transform hover:scale-105 hover:shadow-lg hover:bg-gray-700/60">
+            <h3 className="text-xl font-semibold text-indigo-300 mb-2">
+              Continuous Learning
+            </h3>
+            <p className="text-gray-400 text-sm leading-relaxed">
+              Exploring emerging technologies and frameworks to bring fresh,
+              modern, and effective solutions into projects.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
