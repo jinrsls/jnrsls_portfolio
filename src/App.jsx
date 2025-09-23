@@ -1,10 +1,10 @@
 import Sidebar from "./components/Sidebar";
 import DarkVeil from "./DarkVeil";
-import Home from "./pages/Home";
+import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Experience from "./pages/Experience";
-import Contact from "./pages/Contact";
-import WorkExperience from "./pages/WorkExperience";
+import Certificates from "./pages/Certificates";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -20,14 +20,20 @@ export default function App() {
         {/* Main Content */}
         <main className="flex-1 min-h-auto text-gray-200 w-full md:ml-4">
           <div className="w-full max-w-3xl mx-auto p-6 md:p-8">
-            <section id="home">
-              <Home />
+            <section id="about">
+              <About />
             </section>
             <section id="experience">
-              <WorkExperience />
+              <Experience />
             </section>
-            <section id="contact">
-              <Contact />
+            <section id="projects">
+              <Projects />
+            </section>
+            <section id="certificates">
+              <Certificates />
+            </section>
+            <section id="footer">
+              <Footer />
             </section>
           </div>
         </main>

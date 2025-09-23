@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import me1 from "../assets/me1.png";
 import BlurText from "../components/BlurText";
-import { Mail, Phone, Linkedin, Menu, X } from "lucide-react";
+import { Mail, Phone, Linkedin, MapPin, Menu, X } from "lucide-react"; // Added MapPin
 
 const handleAnimationComplete = () => {
   console.log("Animation completed!");
@@ -37,7 +37,7 @@ export default function Sidebar() {
         />
       )}
 
-      {/* Sidebar - sticky on md+, overlay drawer on mobile */}
+      {/* Sidebar */}
       <aside
         className={`fixed md:sticky top-0 left-0 h-full md:h-screen w-72 md:w-80
           bg-gray-950/95 md:bg-gray-950/40 text-white
@@ -51,7 +51,7 @@ export default function Sidebar() {
         {/* Close button (mobile) */}
         <button
           aria-label="Close menu"
-          className="md:hidden absolute top-4 right-4 p-2 rounded-lg bg-gray-900/80 hover:bg-gray-800 text-white z-50"
+          className="md:hidden absolute top-4 right-4 p-2 rounded-lg hover:bg-gray-900 text-white z-50"
           onClick={() => setIsOpen(false)}
         >
           <X className="w-6 h-6" />
@@ -91,53 +91,72 @@ export default function Sidebar() {
 
           {/* Contact / Info */}
           <div className="space-y-6 p-1 flex-1">
-            <div className="flex items-center gap-3">
+            {/* Address */}
+            <div className="flex items-center p-1 gap-2">
+              <MapPin className="w-6 h-6 text-honor-gold flex-shrink-0" />
+              <div>
+                <p className="text-xs uppercase text-gray-500">Address</p>
+                <p className="text-gray-300 text-sm">
+                  Crame Avenue, Camp General Emilio Aguinaldo Quezon City
+                </p>
+              </div>
+            </div>
+
+            {/* Email */}
+            <div className="flex items-center p-1 gap-2">
               <Mail className="w-6 h-6 text-honor-gold flex-shrink-0" />
               <div>
                 <p className="text-xs uppercase text-gray-500">Email</p>
                 <a
-                  href="mailto:jane.rosales@email.com"
+                  href="mailto:janerosales04@gmail.com"
                   className="text-gray-300 hover:text-white text-sm"
                 >
-                  jane.rosales@email.com
+                  janerosales04@gmail.com
                 </a>
               </div>
             </div>
 
-            <div className="flex items-center gap-3">
+            {/* Phone */}
+            <div className="flex items-center p-1 gap-2">
               <Phone className="w-6 h-6 text-honor-gold flex-shrink-0" />
               <div>
                 <p className="text-xs uppercase text-gray-500">Phone</p>
                 <a
-                  href="tel:+639123456789"
+                  href="tel:+639925658349"
                   className="text-gray-300 hover:text-white text-sm"
                 >
-                  +63 912 345 6789
+                  +639925658349
                 </a>
               </div>
             </div>
 
-            <div className="flex items-center gap-3">
+            {/* LinkedIn */}
+            <div className="flex items-center p-1 gap-2">
               <Linkedin className="w-6 h-6 text-honor-gold flex-shrink-0" />
               <div>
                 <p className="text-xs uppercase text-gray-500">LinkedIn</p>
                 <a
-                  href="https://www.linkedin.com/in/janerosales"
+                  href="https://www.linkedin.com/in/jane-rosales-537038214/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-gray-300 hover:text-white text-sm"
                 >
-                  linkedin.com/in/janerosales
+                  linkedin.com/in/jane-rosales-537038214/
                 </a>
               </div>
             </div>
           </div>
 
-          {/* Footer */}
-          <footer className="mt-auto border-t border-gray-800 text-center text-xs text-gray-500 pt-4">
-            <p>© {new Date().getFullYear()} Jane Rosales</p>
-            <p className="mt-1">All Rights Reserved</p>
-          </footer>
+          {/* Resume Button */}
+          <div className="p-4 mt-auto">
+            <a
+              href="/Resume.pdf"
+              download
+              className="block w-full text-center px-4 py-2 text-sm font-medium text-white bg-honor-gold rounded-lg bg-gray-600 hover:bg-indigo-600 transition"
+            >
+              Download Resume
+            </a>
+          </div>
         </div>
       </aside>
     </>

@@ -1,32 +1,94 @@
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
+import { Mail, Phone, Linkedin, Github, Gitlab } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="fixed bottom-0 right-0 px-6 sm:px-10 py-6 sm:py-10 text-sm text-gray-400 z-50">
-      <div className="flex flex-col items-end space-y-3 sm:space-y-4 text-2xl sm:text-3xl">
-        <a
-          href="https://github.com/yourusername"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-[#3533CD] transition"
-        >
-          <FaGithub />
-        </a>
-        <a
-          href="https://linkedin.com/in/yourusername"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-[#3533CD] transition"
-        >
-          <FaLinkedin />
-        </a>
-        <a
-          href="mailto:hello@example.com"
-          className="hover:text-[#3533CD] transition"
-        >
-          <MdEmail />
-        </a>
+    <footer className="bg-transparent text-gray-400 border-t border-gray-800/50 mt-16">
+      <div className="max-w-6xl mx-auto px-6 py-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+        {/* Branding */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-4">
+            Jane Rosales
+          </h3>
+          <p className="text-sm">Front-End Developer</p>
+        </div>
+
+        {/* Quick Links */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
+          <ul className="space-y-2 text-sm">
+            <li>
+              <a href="#about" className="hover:text-white transition">
+                About
+              </a>
+            </li>
+            <li>
+              <a href="#experience" className="hover:text-white transition">
+                Experience
+              </a>
+            </li>
+            <li>
+              <a href="#projects" className="hover:text-white transition">
+                Projects
+              </a>
+            </li>
+            <li>
+              <a href="#certificates" className="hover:text-white transition">
+                Certificates
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        {/* Get in Touch */}
+        <div>
+          <h3 className="text-lg font-semibold text-white mb-4">
+            Get in Touch
+          </h3>
+          <div className="flex-1">
+            <div className="flex items-center gap-3 py-1">
+              <Mail className="w-6 h-6 text-honor-gold flex-shrink-0" />
+              <div>
+                <a
+                  href="mailto:jane.rosales@email.com"
+                  className="text-gray-300 hover:text-white text-sm"
+                >
+                  jane.rosales@email.com
+                </a>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3 py-1">
+              <Phone className="w-6 h-6 text-honor-gold flex-shrink-0" />
+              <div>
+                <a
+                  href="tel:+639123456789"
+                  className="text-gray-300 hover:text-white text-sm"
+                >
+                  +63 912 345 6789
+                </a>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-3 py-1">
+              <Linkedin className="w-6 h-6 text-honor-gold flex-shrink-0" />
+              <div>
+                <a
+                  href="https://www.linkedin.com/in/janerosales"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-white text-sm"
+                >
+                  linkedin.com/in/janerosales
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Bottom Bar */}
+      <div className="mt-12 border-t border-gray-800/50 pt-6 text-center text-xs text-gray-500">
+        © {new Date().getFullYear()} Jane Rosales. All Rights Reserved.
       </div>
     </footer>
   );
