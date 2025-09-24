@@ -17,22 +17,22 @@ export default function Footer() {
           <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <a href="#about" className="hover:text-white transition">
+              <a href="#about" className="hover:text-blue-500 transition">
                 About
               </a>
             </li>
             <li>
-              <a href="#experience" className="hover:text-white transition">
+              <a href="#experience" className="hover:text-blue-500 transition">
                 Experience
               </a>
             </li>
             <li>
-              <a href="#projects" className="hover:text-white transition">
+              <a href="#projects" className="hover:text-blue-500 transition">
                 Projects
               </a>
             </li>
             <li>
-              <a href="#certificates" className="hover:text-white transition">
+              <a href="#certificates" className="hover:text-blue-500 transition">
                 Certificates
               </a>
             </li>
@@ -50,7 +50,7 @@ export default function Footer() {
               <div>
                 <a
                   href="mailto:jane.rosales@email.com"
-                  className="text-gray-300 hover:text-white text-sm"
+                  className="text-gray-300 hover:text-blue-500 text-sm"
                 >
                   jane.rosales@email.com
                 </a>
@@ -62,7 +62,7 @@ export default function Footer() {
               <div>
                 <a
                   href="tel:+639123456789"
-                  className="text-gray-300 hover:text-white text-sm"
+                  className="text-gray-300 hover:text-blue-500 text-sm"
                 >
                   +63 912 345 6789
                 </a>
@@ -76,7 +76,7 @@ export default function Footer() {
                   href="https://www.linkedin.com/in/janerosales"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-white text-sm"
+                  className="text-gray-300 hover:text-blue-500 text-sm"
                 >
                   linkedin.com/in/janerosales
                 </a>

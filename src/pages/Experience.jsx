@@ -23,39 +23,34 @@ export default function WorkExperience() {
   ];
 
   return (
-    <section id="experience" className="px-6 py-10 min-h-screen">
+    <section id="experience" className="px-4 py-10 min-h-screen">
       {/* Title */}
-      <h1 className="text-4xl md:text-2xl font-extrabold text-gray-100 mb-12 tracking-wide flex items-center gap-2">
+      <h1 className="text-3xl font-extrabold text-gray-100 mb-12 text-center">
         EXPERIENCE
       </h1>
 
       {/* Timeline */}
-      <div className="relative border-l border-gray-700 max-w-3xl mx-auto">
+      <div className="relative border-l border-gray-700 max-w-4xl mx-auto">
         {experiences.map((exp, index) => (
           <div key={index} className="mb-10 ml-6">
-            {/* Circle marker */}
+            {/* Marker */}
             <span className="absolute -left-3 flex items-center justify-center w-6 h-6 bg-gray-900 border border-gray-700 rounded-full">
-              <span className="w-3 h-3 bg-indigo-400 rounded-full"></span>
+              <span className="w-3 h-3 bg-blue-500 rounded-full"></span>
             </span>
 
-            {/* Card */}
-            <div className="p-4 bg-gray-800/50 rounded-lg shadow hover:bg-gray-700/70 transition">
-              <h2 className="text-lg font-semibold text-gray-100">
+            {/* Card with glow */}
+            <div
+              className="bg-gray-800/50 rounded-xl shadow-md overflow-hidden 
+              transition transform hover:-translate-y-1 
+              hover:shadow-[0_0_25px_rgba(59,130,246,0.7)] p-5"
+            >
+              <h2 className="text-lg font-semibold text-blue-600">
                 {exp.role}
               </h2>
-              <p className="text-sm text-gray-400">{exp.company}</p>
-              <span className="inline-block mt-2 px-3 py-1 text-xs font-medium text-gray-300 border border-gray-600 rounded-full">
+              <p className="text-sm text-gray-400 mt-1">{exp.company}</p>
+              <span className="inline-block mt-3 px-3 py-1 text-xs font-medium text-gray-300 border border-gray-600 rounded-full">
                 {exp.date}
               </span>
-
-              {/* Details (if any) */}
-              {exp.details && (
-                <ul className="mt-3 list-disc list-inside text-gray-400 text-sm space-y-1">
-                  {exp.details.map((detail, i) => (
-                    <li key={i}>{detail}</li>
-                  ))}
-                </ul>
-              )}
             </div>
           </div>
         ))}

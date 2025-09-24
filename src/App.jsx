@@ -18,8 +18,8 @@ export default function App() {
         <Sidebar />
 
         {/* Main Content */}
-        <main className="flex-1 min-h-auto text-gray-200 w-full md:ml-4">
-          <div className="w-full max-w-3xl mx-auto p-6 md:p-8">
+        <main className="flex-1 min-h-auto text-gray-200 w-full">
+          <div className="w-full max-w-3xl mx-auto p-6">
             <section id="about">
               <About />
             </section>
