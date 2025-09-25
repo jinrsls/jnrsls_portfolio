@@ -35,7 +35,7 @@ export default function Projects() {
   ];
 
   return (
-    <section id="projects" className="px-4 py-10 min-h-screen">
+    <section id="projects" className="px-8 py-10 min-h-screen">
       {/* Title */}
       <h1 className="text-3xl font-extrabold text-gray-100 mb-12 tracking-wide text-center">
         PROJECTS

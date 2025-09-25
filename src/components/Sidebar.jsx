@@ -22,20 +22,65 @@ export default function Sidebar() {
     <>
       {/* ===== MOBILE HEADER ===== */}
       <header className="md:hidden fixed top-0 left-0 w-full bg-gray-950/95 border-b border-gray-800/40 shadow-lg z-50">
-        <div className="flex items-center gap-4 px-4 py-3">
+        <div className="flex items-center gap-4 px-8 py-3">
           {/* Profile Image */}
           <img
             src={me1}
             alt="Profile"
-            className="w-20 h-20 rounded-md border-2 border-gray-800 object-cover"
+            className="w-32 h-32 rounded-md border-2 border-gray-800 object-cover"
           />
 
-          {/* Name + Title */}
-          <div className="flex flex-col">
-            <h2 className="text-lg font-semibold text-white">Jane Rosales</h2>
-            <p className="text-xs text-gray-400">Front-End Developer</p>
-            <div className="flex items-center gap-1 text-xs text-gray-500">
-              
+          {/* Name + Title + Centered Actions */}
+          <div className="flex flex-col flex-1 items-center text-center">
+            <h2 className="text-2xl font-semibold text-white">Jane Rosales</h2>
+            <p className="text-sm text-gray-400">Front-End Developer</p>
+
+            {/* Icons Row */}
+            <div className="flex justify-center items-center gap-3 mt-2">
+              {/* Email */}
+              <a
+                href="mailto:janerosales04@gmail.com"
+                className="p-2 bg-gray-800 rounded-full hover:bg-blue-600 transition"
+                aria-label="Email"
+              >
+                <Mail className="w-4 h-4 text-white" />
+              </a>
+
+              {/* Phone */}
+              <a
+                href="tel:+639925658349"
+                className="p-2 bg-gray-800 rounded-full hover:bg-blue-600 transition"
+                aria-label="Phone"
+              >
+                <Phone className="w-4 h-4 text-white" />
+              </a>
+
+              {/* LinkedIn */}
+              <a
+                href="https://www.linkedin.com/in/jane-rosales-537038214/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2 bg-gray-800 rounded-full hover:bg-blue-600 transition"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-4 h-4 text-white" />
+              </a>
+            </div>
+
+            {/* Resume Button */}
+            <div className="mt-2">
+              <a
+                href="/Resume.pdf"
+                download
+                className="inline-block px-4 py-2 text-xs font-semibold 
+          text-white rounded-lg 
+          bg-gray-500 
+          transition duration-300 ease-in-out
+          hover:bg-blue-600 
+          hover:shadow-[0_0_15px_rgba(79,70,229,0.8)]"
+              >
+                Download Resume
+              </a>
             </div>
           </div>
         </div>

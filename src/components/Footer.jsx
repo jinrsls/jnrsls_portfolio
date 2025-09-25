@@ -3,7 +3,7 @@ import { Mail, Phone, Linkedin, Github, Gitlab } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="bg-transparent text-gray-400 border-t border-gray-800/50 mt-16">
-      <div className="max-w-6xl mx-auto px-6 py-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="max-w-6xl mx-auto px-8 py-6 grid grid-cols-1 md:grid-cols-3 gap-4">
         {/* Branding */}
         <div>
           <h3 className="text-lg font-semibold text-white mb-4">

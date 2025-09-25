@@ -43,7 +43,7 @@ export default function Certificates() {
   ];
 
   return (
-    <section id="certificates" className="px-4 py-10 min-h-screen">
+    <section id="certificates" className="px-8 py-10 min-h-screen">
       {/* Title */}
       <h1 className="text-3xl font-extrabold text-white mb-12 tracking-wide glow-title text-center">
         CERTIFICATES

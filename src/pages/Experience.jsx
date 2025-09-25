@@ -23,7 +23,7 @@ export default function WorkExperience() {
   ];
 
   return (
-    <section id="experience" className="px-4 py-10 min-h-screen">
+    <section id="experience" className="px-8 py-2 min-h-screen">
       {/* Title */}
       <h1 className="text-3xl font-extrabold text-gray-100 mb-12 text-center">
         EXPERIENCE
